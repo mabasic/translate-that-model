@@ -29,3 +29,7 @@ $realestate = Realestate::with('city.translations')->get();
 // specify on which locale you want it returned
 {{ $realestate->translations('hr')->first()->name }}
 ```
+
+## Info
+
+If you have any questions or need more usage examples or features feel free to open a issue or contact me.
