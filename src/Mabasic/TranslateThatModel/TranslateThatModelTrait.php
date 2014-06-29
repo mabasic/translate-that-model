@@ -2,6 +2,7 @@
 
 use App;
 use Language;// This is a must have model
+use Config;
 
 trait TranslateThatModelTrait {
 
@@ -20,11 +21,11 @@ trait TranslateThatModelTrait {
         if($locale == null) $locale = App::getLocale();
 
         // find out language id from database
-        $language_id = Language::where( Config::get('TranslateThatModel::column'), '=', $locale)
+        $language_id = Language::where( Config::get('translate-that-model::column'), '=', $locale)
             ->remember(1440)->first()->id;
 
         // return hasMany with where clause from this Class
-        return $this->hasMany( get_class($this).Config::get('TranslateThatModel::suffix') )
+        return $this->hasMany( get_class($this).Config::get('translate-that-model::suffix') )
             ->where('language_id','=',$language_id);
     }
 
