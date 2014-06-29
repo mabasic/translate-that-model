@@ -33,3 +33,12 @@ $realestate = Realestate::with('city.translations')->get();
 ## Info
 
 If you have any questions or need more usage examples or features feel free to open a issue or contact me.
+
+### Credits
+
+This package is inspired by [laravel-translatable](https://github.com/dimsav/laravel-translatable).
+
+> The reason why I could not just use the package above is that it assumes that I keep locale field in every table that holds translations.
+I keep locale field in my language table. After looking at the source code I concluded that It would be simpler to create my own package, because I don't need those fancy model update options.
+
+
