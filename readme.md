@@ -24,10 +24,10 @@ This package enables you to easily fetch localized columns from your models.
 $realestate = Realestate::with('city.translations')->get();
 
 // display translated name on current application locale
-{{ $realestate->translations->first()->name }}
+{{ $realestate->city->translations->first()->name }}
 //or 
 // specify on which locale you want it returned
-{{ $realestate->translations('hr')->first()->name }}
+{{ $realestate->city->translations('hr')->first()->name }}
 ```
 
 ## Info
