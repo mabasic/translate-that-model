@@ -1,0 +1,25 @@
+{
+    "name": "mabasic/translate-that-model",
+    "description": "This package adds a single trait to enable simple model translation.",
+    "keywords": ["model", "laravel", "localization", "translate", "translation", "trait"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mario Basic",
+            "email": "mario.basic@outlook.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Mabasic\\TranslateThatModel\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
